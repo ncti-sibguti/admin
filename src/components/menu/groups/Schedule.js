@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Button, Form, Table} from "react-bootstrap";
 import {createSchedule} from "../../../api/api";
 
-const Schedule = ({id, group, storage}) => {
+const Schedule = ({id, schedule, storage}) => {
 
     const [dayForSchedule, setDayForSchedule] = useState("");
     const [numberPair, setNumberPair] = useState("");
@@ -16,8 +16,8 @@ const Schedule = ({id, group, storage}) => {
     const dayInWeek = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница"]
 
     useEffect(() => {
-        setLessons(group.schedule)
-    }, [group.schedule])
+        setLessons(schedule)
+    }, [schedule])
 
     useEffect(() => {
         // Группируем по дням
@@ -102,11 +102,11 @@ const Schedule = ({id, group, storage}) => {
             </Form>
 
             {
-                group.schedule.length === 0 &&
+                schedule.length === 0 &&
                 <p>У текущей группы нет расписания</p>
             }
             {
-                group.schedule.length !== 0 &&
+                schedule.length !== 0 &&
                 dayInWeek.map((day) =>
                     <Table>
                         <caption>{day}</caption>

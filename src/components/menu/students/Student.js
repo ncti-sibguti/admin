@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Container, Form} from "react-bootstrap";
 import {useNavigate, useParams} from "react-router-dom";
-import {deleteStudentById, getStudentById} from "../../../api/api";
+import {deleteStudentById, getStudentById, resetPassword} from "../../../api/api";
 import {observer} from "mobx-react-lite";
 import {MENU_URL} from "../../../api/url";
 
@@ -36,6 +36,10 @@ const Student = observer(() => {
         navigate(MENU_URL)
     }
 
+    const rsPasswd = async () => {
+        await resetPassword(params.id)
+    }
+
     return (
         <Container>
             <Form>
@@ -64,6 +68,11 @@ const Student = observer(() => {
                 <Button variant="primary" type="submit" onClick={(e) => view(e)}>
                     Сохранить
                 </Button>
+
+                <Button variant="primary" type="submit" onClick={rsPasswd}>
+                    Сбросить пароль
+                </Button>
+
                 <Button variant="danger" type="submit" onClick={(e) => deleteStudent(e)}>
                     Удалить
                 </Button>

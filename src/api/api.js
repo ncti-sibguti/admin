@@ -82,6 +82,11 @@ const addSubject = async (name) => {
     await $auth.post("/admin/subject", {name: name})
 }
 
+const resetPassword = async (id) => {
+    let password = process.env.RESET_PASSWORD
+    await $auth.put("/admin/reset", {id, password})
+}
+
 const createSchedule = async (day, id, numberPair, teacherId, subjectId, classroom) => {
     const {data} = await $auth.post("/admin/schedule", {
         day: day,
@@ -105,6 +110,7 @@ export {
     deleteStudentById,
     deleteTeacherById,
     createGroup,
+    resetPassword,
     getGroupById,
     deleteGroupById,
     addSubject,

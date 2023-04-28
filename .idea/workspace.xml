@@ -5,41 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99329cf-ab37-481f-a1db-c158732255dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AppRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/http.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/url.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/groups/Group.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/groups/GroupItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/groups/Groups.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/students/Student.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/students/StudentItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/students/Students.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/subject/SubjectItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/subject/Subjects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/teacher/Teacher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/teacher/Teachers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/teacher/TeachersItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navigation/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/generalStorage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/userStoreage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/url.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/url.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Group.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/students/Student.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/students/Student.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/teacher/Teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/teacher/Teacher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +51,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -110,7 +88,11 @@
       <updated>1682488949181</updated>
       <workItem from="1682488950347" duration="1760000" />
       <workItem from="1682491070486" duration="315000" />
-      <workItem from="1682492911970" duration="4076000" />
+      <workItem from="1682492911970" duration="4211000" />
+      <workItem from="1682499174853" duration="2463000" />
+      <workItem from="1682680697101" duration="7000" />
+      <workItem from="1682705290668" duration="12000" />
+      <workItem from="1682705310948" duration="3384000" />
     </task>
     <servers />
   </component>

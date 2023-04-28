@@ -6,8 +6,9 @@ const GROUPS_URL = "/groups"
 const GROUP_URL = "/group"
 const TEACHERS_URL = "/teachers"
 const TEACHER_URL = "/teacher"
-
 const SUBJECTS_URL = "/subjects"
+const PROFILE_URL = "/profile"
+
 
 export {
     LOGIN_URL,
@@ -18,5 +19,7 @@ export {
     TEACHERS_URL,
     TEACHER_URL,
     GROUP_URL,
-    SUBJECTS_URL
+    SUBJECTS_URL,
+    PROFILE_URL,
+
 }

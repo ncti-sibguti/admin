@@ -1,34 +1,26 @@
 import React, {useContext} from 'react';
-import {Route, Routes, useNavigate} from "react-router-dom"
+import {Navigate, Route, Routes} from "react-router-dom"
 import {Context} from "./index";
 import {authRouters, publicRouters} from "./routes";
-import Auth from "./components/auth/Auth";
-import {LOGIN_URL} from "./api/url";
+import {LOGIN_URL, MENU_URL} from "./api/url";
+import Menu from "./components/Menu";
 
 const AppRouter = () => {
     const {user} = useContext(Context);
-    const navigate = useNavigate();
 
     return (
         <Routes>
 
-            {
-                user.isAuth ?
-                    <>
+            <Route
+                path={MENU_URL}
+                element={!user.isAuth ? <Navigate to={LOGIN_URL}/> : <Menu/>}
+            />
 
-                        {user.isAuth && authRouters.map(({path, Component}) => <Route key={path} path={path}
-                                                                                      element={<Component/>}/>)}
-                    </> :
-                    <>
-                        {publicRouters.map(({path, Component}) => <Route key={path} path={path}
-                                                                         element={<Component/>}/>)}
-                        {
-                            navigate(LOGIN_URL)
-                        }
-                    </>
-            }
+            {user.isAuth && authRouters.map(({path, Component}) =>
+                <Route key={path} path={path} element={<Component/>}/>)}
+            {publicRouters.map(({path, Component}) =>
+                <Route key={path} path={path} element={<Component/>}/>)}
 
-            <Route path={"*"} element={<Auth/>}/>
         </Routes>
     );
 };

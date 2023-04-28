@@ -22,7 +22,6 @@ const Group = () => {
 
     useEffect(() => {
         getGroupById(params.id).then(data => setGroup(data));
-
         getSubjects().then(data => storage.subjects = data)
         getTeachers().then(data => storage.teachers = data)
         setName(group.name)
@@ -66,7 +65,7 @@ const Group = () => {
                     <Students group={params.id}/>
                 </Tab>
                 <Tab eventKey="schedule" title="Расписания">
-                    <Schedule id={params.id} group={group} storage={storage}/>
+                    <Schedule id={params.id} schedule={group.schedule} storage={storage}/>
                 </Tab>
             </Tabs>
         </Container>
