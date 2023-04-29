@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {Button, Container, Nav, Navbar} from 'react-bootstrap';
 import {Context} from "../../index";
 import {observer} from "mobx-react-lite";
-import {MENU_URL, PROFILE_URL} from "../../api/url";
+import {MENU_URL} from "../../api/url";
 
 
 const NavBar = observer(() => {
@@ -35,7 +35,7 @@ const NavBar = observer(() => {
                                 <Nav.Link href={MENU_URL}>Главное меню</Nav.Link>
                             </Nav>
                             <Nav.Item>
-                                Signed in as: <a href={PROFILE_URL}>{user.user.firstname} {user.user.surname}</a>
+                                Signed in as: {user.user.username}
                             </Nav.Item>
                         </Navbar.Collapse>
                     )

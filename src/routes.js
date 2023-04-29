@@ -3,7 +3,6 @@ import {
     GROUPS_URL,
     LOGIN_URL,
     MENU_URL,
-    PROFILE_URL,
     REGISTER_URL,
     STUDENT_URL,
     SUBJECTS_URL,
@@ -18,7 +17,6 @@ import Teacher from "./components/menu/teacher/Teacher";
 import Student from "./components/menu/students/Student";
 import Groups from "./components/menu/groups/Groups";
 import Subjects from "./components/menu/subject/Subjects";
-import Profile from "./components/Profile";
 
 const publicRouters = [
     {
@@ -60,11 +58,6 @@ const authRouters = [
         path: SUBJECTS_URL,
         Component: Subjects
     },
-    {
-        path: PROFILE_URL,
-        Component: Profile
-    }
-
 ]
 
 

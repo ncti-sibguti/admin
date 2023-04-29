@@ -9,6 +9,12 @@ const login = async (username, password) => {
     return getInfo(token);
 }
 
+const register = async (username, password) => {
+    await $http.post("/auth/register", {
+        username, password
+    })
+}
+
 const getInfo = async (token) => {
     let userInfo = jwtDecode(token);
     const {data} = await $auth.get(`/admin/${userInfo.user_id}`);
@@ -101,6 +107,7 @@ const createSchedule = async (day, id, numberPair, teacherId, subjectId, classro
 
 export {
     login,
+    register,
     check,
     getStudents,
     getGroups,

@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99329cf-ab37-481f-a1db-c158732255dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/url.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/url.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Group.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/students/Student.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/students/Student.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/teacher/Teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/teacher/Teacher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigation/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/NavBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
@@ -92,7 +88,9 @@
       <workItem from="1682499174853" duration="2463000" />
       <workItem from="1682680697101" duration="7000" />
       <workItem from="1682705290668" duration="12000" />
-      <workItem from="1682705310948" duration="3384000" />
+      <workItem from="1682705310948" duration="3933000" />
+      <workItem from="1682755439559" duration="2426000" />
+      <workItem from="1682757939398" duration="1400000" />
     </task>
     <servers />
   </component>
