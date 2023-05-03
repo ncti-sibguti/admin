@@ -13,7 +13,7 @@ const Schedule = ({id, schedule, storage}) => {
     const [lessons, setLessons] = useState([]);
     const [groupedLessons, setGroupedLessons] = useState({});
 
-    const dayInWeek = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница"]
+    const dayInWeek = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
 
     useEffect(() => {
         setLessons(schedule)
@@ -57,6 +57,7 @@ const Schedule = ({id, schedule, storage}) => {
                         <option value={"Среда"}>Среда</option>
                         <option value={"Четверг"}>Четверг</option>
                         <option value={"Пятница"}>Пятница</option>
+                        <option value={"Суббота"}>Суббота</option>
                     </Form.Select>
                 </Form.Group>
 
@@ -114,6 +115,7 @@ const Schedule = ({id, schedule, storage}) => {
                         <tr>
                             <th>№</th>
                             <th>Предмет</th>
+                            <th>Преподаватель</th>
                             <th>Кабинет</th>
                         </tr>
                         </thead>
@@ -124,6 +126,7 @@ const Schedule = ({id, schedule, storage}) => {
                                 <tr>
                                     <td>{i.numberPair}</td>
                                     <td>{i.subject.name}</td>
+                                    <td>{i.teacher.lastname} {i.teacher.firstname} {i.teacher.surname}</td>
                                     <td>{i.classroom}</td>
                                 </tr>
                             ))

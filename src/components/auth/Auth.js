@@ -25,7 +25,8 @@ const Auth = observer(() => {
                 user.user = data;
                 navigate(MENU_URL)
             } else {
-                await register(username, password)
+                const data = await register(username, password)
+                console.log(data)
                 navigate(LOGIN_URL)
             }
         } catch (error) {

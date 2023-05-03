@@ -1,13 +1,16 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Context} from "../../../index";
 import {getTeachers} from "../../../api/api";
 import {observer} from "mobx-react-lite";
-import {Container, ListGroup} from "react-bootstrap";
+import {Button, Container, ListGroup} from "react-bootstrap";
 import TeachersItem from "./TeachersItem";
+import TeacherModal from "../modal/TeacherModal";
 
 const Teachers = observer(() => {
 
     const {storage} = useContext(Context);
+
+    const [modalVisible, setModalVisible] = useState(false)
 
     useEffect(() => {
         getTeachers().then(data => storage.teachers = data)
@@ -15,15 +18,21 @@ const Teachers = observer(() => {
 
     return (
         <Container>
+            <Button onClick={() => setModalVisible(true)}>Добавить преподавателя</Button>
             <ListGroup as="ul">
                 {
-                    storage.teachers.map(({id, firstname, lastname, surname}) =>
+                    storage.teachers.length !== 0 && storage.teachers.map(({id, firstname, lastname, surname}) =>
                         <TeachersItem key={id} id={id}
                                       firstname={firstname}
                                       lastname={lastname}
                                       surname={surname}/>)
                 }
+                {
+                    storage.teachers.length === 0 && <p>Преподавателей пока нет</p>
+                }
             </ListGroup>
+
+            <TeacherModal show={modalVisible} onHide={() => setModalVisible(false)}/>
         </Container>
     );
 });

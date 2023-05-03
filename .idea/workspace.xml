@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99329cf-ab37-481f-a1db-c158732255dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/menu/modal/StudentModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menu/modal/TeacherModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/url.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/url.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/teacher/Teachers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/teacher/Teachers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,21 @@
       <workItem from="1682705290668" duration="12000" />
       <workItem from="1682705310948" duration="3933000" />
       <workItem from="1682755439559" duration="2426000" />
-      <workItem from="1682757939398" duration="1400000" />
+      <workItem from="1682757939398" duration="2087000" />
+      <workItem from="1682833826363" duration="473000" />
+      <workItem from="1682834342211" duration="4583000" />
+      <workItem from="1682852173168" duration="1449000" />
+      <workItem from="1682876498916" duration="2994000" />
+      <workItem from="1682880499473" duration="622000" />
+      <workItem from="1682922580345" duration="2000" />
+      <workItem from="1682925302263" duration="740000" />
+      <workItem from="1682928443445" duration="598000" />
+      <workItem from="1682971145779" duration="772000" />
+      <workItem from="1683015291079" duration="60000" />
+      <workItem from="1683018933087" duration="1377000" />
+      <workItem from="1683034985821" duration="42000" />
+      <workItem from="1683089523904" duration="2184000" />
+      <workItem from="1683105905283" duration="1926000" />
     </task>
     <servers />
   </component>
