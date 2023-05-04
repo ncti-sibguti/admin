@@ -30,7 +30,7 @@ const Auth = observer(() => {
                 navigate(LOGIN_URL)
             }
         } catch (error) {
-            console.log(error.response.data.message);
+            console.log(error);
         }
     }
 

@@ -1,27 +1,27 @@
-# базовый образ
-FROM node:14.16.1-alpine3.10
+# Создаем образ на основе node image
+FROM node:14.16.1-alpine3.13 AS build
 
-# создаем директорию приложения
+# Установка рабочей директории
 WORKDIR /app
 
-# копируем package.json и package-lock.json (если есть)
+# Установка зависимостей
 COPY package*.json ./
-
-# устанавливаем зависимости
 RUN npm install
 
-# копируем файлы приложения
+# Копирование кода приложения
 COPY . .
 
-# собираем приложение в production mode
+# Сборка приложения
 RUN npm run build
 
-# создаем nginx сервер и копируем собранное приложение
-FROM nginx:alpine
-COPY --from=0 /app/build /usr/share/nginx/html
+# Создание образа nginx
+FROM nginx:1.21.0-alpine
 
-# копируем конфигурационный файл nginx
+# Копирование конфигурационного файла nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# запускаем nginx
+# Копирование собранного приложения из образа node
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Запуск nginx
 CMD ["nginx", "-g", "daemon off;"]
