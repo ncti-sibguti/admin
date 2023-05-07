@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99329cf-ab37-481f-a1db-c158732255dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/menu/modal/ScheduleEditModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menu/modal/ScheduleUploadModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/url.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/url.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Group.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Groups.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Groups.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/subject/SubjectItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/subject/Subjects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Dockerfile" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -117,7 +125,12 @@
       <workItem from="1683129299268" duration="1826000" />
       <workItem from="1683180271984" duration="8183000" />
       <workItem from="1683191287610" duration="4694000" />
-      <workItem from="1683203899637" duration="3704000" />
+      <workItem from="1683203899637" duration="3832000" />
+      <workItem from="1683275330916" duration="1937000" />
+      <workItem from="1683389403924" duration="3000" />
+      <workItem from="1683457555098" duration="2412000" />
+      <workItem from="1683463892696" duration="592000" />
+      <workItem from="1683464778305" duration="7144000" />
     </task>
     <servers />
   </component>

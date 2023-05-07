@@ -1,14 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Form, Table} from "react-bootstrap";
 import {createSchedule} from "../../../api/api";
+import ScheduleEditModal from "../modal/ScheduleEditModal";
 
 const Schedule = ({id, schedule, storage}) => {
 
     const [dayForSchedule, setDayForSchedule] = useState("");
     const [numberPair, setNumberPair] = useState("");
     const [teacherId, setTeacherId] = useState("")
-    const [subjectId, setSubjectId] = useState("")
+    const [subject, setSubject] = useState("")
     const [classroom, setClassroom] = useState("")
+    const [weekType, setWeekType] = useState("")
 
     const [lessons, setLessons] = useState([]);
     const [groupedLessons, setGroupedLessons] = useState({});
@@ -41,11 +43,15 @@ const Schedule = ({id, schedule, storage}) => {
     }, [dayInWeek, lessons]);
 
     const addSchedule = async () => {
-        await createSchedule(dayForSchedule, id, numberPair, teacherId, subjectId, classroom);
+        await createSchedule(dayForSchedule, id, numberPair, teacherId, subject, classroom, weekType);
     }
 
+    const [show, setShow] = useState(false)
+    const [one, setOne] = useState([{}])
+
+
     return (
-        <div>
+        <>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Выберите день недели</Form.Label>
@@ -68,17 +74,10 @@ const Schedule = ({id, schedule, storage}) => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Выберите предмет</Form.Label>
-                    <Form.Select value={subjectId} onChange={(e) => setSubjectId(e.target.value)}
-                                 aria-label="Выберите предмет">
-                        <option>Выберите предмет</option>
-                        {
-                            storage.subjects.map(({id, name}) => <option
-                                key={id} value={id}> {name}</option>)
-                        }
-                    </Form.Select>
+                    <Form.Label>Предмет</Form.Label>
+                    <Form.Control value={subject} type="text" placeholder="Номер кабинета"
+                                  onChange={(e) => setSubject(e.target.value)}/>
                 </Form.Group>
-
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Выберите преподавателя</Form.Label>
                     <Form.Select value={teacherId} onChange={(e) => setTeacherId(e.target.value)}
@@ -97,6 +96,17 @@ const Schedule = ({id, schedule, storage}) => {
                                   onChange={(e) => setClassroom(e.target.value)}/>
                 </Form.Group>
 
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Тип дня</Form.Label>
+                    <Form.Select value={weekType} onChange={(e) => setWeekType(e.target.value)}
+                                 aria-label="Выберите день недели">
+                        <option>Выберите тип дня</option>
+                        <option value={"odd"}>нечетный</option>
+                        <option value={"even"}>четный</option>
+                        <option value={"const"}>постоянный</option>
+                    </Form.Select>
+                </Form.Group>
+
                 <Button variant="primary" type="submit" onClick={addSchedule}>
                     Добавить расписание
                 </Button>
@@ -110,8 +120,8 @@ const Schedule = ({id, schedule, storage}) => {
                 schedule.length !== 0 &&
                 dayInWeek.map((day) =>
                     <Table>
-                        <caption>{day}</caption>
                         <thead>
+                        <caption>{day}</caption>
                         <tr>
                             <th>№</th>
                             <th>Предмет</th>
@@ -123,9 +133,12 @@ const Schedule = ({id, schedule, storage}) => {
                         {
                             groupedLessons[day] &&
                             groupedLessons[day].map((i) => (
-                                <tr>
+                                <tr onClick={() => {
+                                    setOne(i)
+                                    setShow(true)
+                                }}>
                                     <td>{i.numberPair}</td>
-                                    <td>{i.subject.name}</td>
+                                    <td>{i.subject}</td>
                                     <td>{i.teacher.lastname} {i.teacher.firstname} {i.teacher.surname}</td>
                                     <td>{i.classroom}</td>
                                 </tr>
@@ -135,7 +148,9 @@ const Schedule = ({id, schedule, storage}) => {
                     </Table>
                 )
             }
-        </div>
+
+            <ScheduleEditModal show={show} onHide={() => setShow(false)} subject={one}/>
+        </>
     );
 };
 

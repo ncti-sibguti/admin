@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {Button, Container, Form, Tab, Tabs} from "react-bootstrap";
 import {useNavigate, useParams} from "react-router-dom";
-import {deleteGroupById, getGroupById, getSubjects, getTeachers} from "../../../api/api";
+import {deleteGroupById, getGroupById, getTeachers} from "../../../api/api";
 import {MENU_URL} from "../../../api/url";
 import {Context} from "../../../index";
 import Schedule from "./Schedule";
@@ -22,7 +22,6 @@ const Group = () => {
 
     useEffect(() => {
         getGroupById(params.id).then(data => setGroup(data));
-        getSubjects().then(data => storage.subjects = data)
         getTeachers().then(data => storage.teachers = data)
         setName(group.name)
     }, [params.id, group.name, storage])
@@ -53,8 +52,6 @@ const Group = () => {
                     Удалить
                 </Button>
             </Form>
-
-            <h1 className={"mt-3"}>Расписание</h1>
 
             <Tabs
                 defaultActiveKey="schedule"

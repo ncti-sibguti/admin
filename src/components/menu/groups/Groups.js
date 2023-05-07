@@ -4,6 +4,7 @@ import {Context} from "../../../index";
 import {observer} from "mobx-react-lite";
 import {createGroup, getGroups} from "../../../api/api";
 import GroupItem from "./GroupItem";
+import ScheduleUploadModal from "../modal/ScheduleUploadModal";
 
 const Groups = observer(() => {
 
@@ -20,6 +21,8 @@ const Groups = observer(() => {
         console.log(data);
     }
 
+    const [show, setShow] = useState(false)
+
     return (
         <Container>
 
@@ -34,6 +37,15 @@ const Groups = observer(() => {
                     Сохранить
                 </Button>
             </Form>
+
+
+            <Button onClick={() => setShow(true)} variant={"outline-primary"} className={"mb-3"}>
+                Загрузить расписание для групп
+            </Button>
+
+            <ScheduleUploadModal show={show} onHide={() => setShow(false)}/>
+
+            <h1 className={"mt-3"}>Расписание</h1>
 
             <ListGroup as="ul">
                 {

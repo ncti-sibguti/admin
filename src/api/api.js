@@ -5,7 +5,6 @@ const AUTH_URL = "/auth";
 const TEACHERS_URL = "/teachers"
 const STUDENTS_URL = "/students"
 const GROUPS_URL = "/groups"
-const SUBJECTS_URL = "/subjects"
 
 const login = async (username, password) => {
     const {data} = await $http.post(AUTH_URL + "/login", {username, password})
@@ -54,6 +53,13 @@ const createTeacher = async (firstname, lastname, surname, email, password) => {
 
 const createTeachersWithFile = async (file) => {
     await $auth.post("/admin/upload-teachers", {file: file}, {
+        headers: {
+            'Content-Type': 'multipart/form-data'
+        }
+    })
+}
+const uploadSchedule = async (file) => {
+    await $auth.post("/admin/upload-schedule", {file: file}, {
         headers: {
             'Content-Type': 'multipart/form-data'
         }
@@ -110,28 +116,20 @@ const deleteGroupById = async (id) => {
     return data;
 }
 
-const getSubjects = async () => {
-    const {data} = await $auth.get("/admin" + SUBJECTS_URL);
-    return data;
-}
-
-const addSubject = async (name) => {
-    await $auth.post("/admin" + SUBJECTS_URL, {name: name})
-}
-
 const resetPassword = async (id) => {
     let password = process.env.RESET_PASSWORD
     await $auth.put("/admin/reset", {id, password})
 }
 
-const createSchedule = async (day, id, numberPair, teacherId, subjectId, classroom) => {
+const createSchedule = async (day, id, numberPair, teacherId, subject, classroom, weekType) => {
     const {data} = await $auth.post("/admin/schedule", {
         day: day,
         group: id,
         numberPair: numberPair,
         teacher: teacherId,
-        subject: subjectId,
-        classroom: classroom
+        subject: subject,
+        classroom: classroom,
+        weekType: weekType
     })
     return data
 }
@@ -151,11 +149,10 @@ export {
     resetPassword,
     getGroupById,
     deleteGroupById,
-    addSubject,
-    getSubjects,
     createSchedule,
     createStudentWithFile,
     createStudent,
     createTeachersWithFile,
-    createTeacher
+    createTeacher,
+    uploadSchedule
 }
