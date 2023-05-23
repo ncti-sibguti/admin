@@ -35,7 +35,7 @@ const NavBar = observer(() => {
                                 <Nav.Link href={MENU_URL}>Главное меню</Nav.Link>
                             </Nav>
                             <Nav.Item>
-                                Signed in as: {user.user.username}
+                                Signed in as: {user.user.firstname} {user.user.lastname}
                             </Nav.Item>
                         </Navbar.Collapse>
                     )

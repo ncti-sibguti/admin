@@ -1,16 +1,18 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {Button, Container, Form, ListGroup} from "react-bootstrap";
+import {Button, Container, Form, Table} from "react-bootstrap";
 import {Context} from "../../../index";
 import {observer} from "mobx-react-lite";
 import {createGroup, getGroups} from "../../../api/api";
-import GroupItem from "./GroupItem";
 import ScheduleUploadModal from "../modal/ScheduleUploadModal";
+import {GROUP_URL} from "../../../api/url";
+import {useNavigate} from "react-router-dom";
 
 const Groups = observer(() => {
 
     const {storage} = useContext(Context);
 
     const [name, setName] = useState("")
+    const navigate = useNavigate()
 
     useEffect(() => {
         getGroups().then(data => storage.groups = data)
@@ -18,7 +20,6 @@ const Groups = observer(() => {
 
     const post = async () => {
         let data = await createGroup(name);
-        console.log(data);
     }
 
     const [show, setShow] = useState(false)
@@ -47,12 +48,27 @@ const Groups = observer(() => {
 
             <h1 className={"mt-3"}>Расписание</h1>
 
-            <ListGroup as="ul">
+            <Table>
+                <thead>
+                <tr>
+                    <th>Группа</th>
+                    <th>Курс</th>
+                    <th>Специальность</th>
+                </tr>
+                </thead>
+                <tbody>
                 {
-                    storage.groups.map(({id, name}) =>
-                        <GroupItem key={id} id={id} name={name}/>)
+                    storage.groups &&
+                    storage.groups.map(({id, name, course, speciality}) => (
+                        <tr style={{cursor: "pointer"}} onClick={() => navigate(GROUP_URL + "/" + id)}>
+                            <td>{name}</td>
+                            <td>{course}</td>
+                            <td>{speciality && speciality.id} {speciality && speciality.name}</td>
+                        </tr>
+                    ))
                 }
-            </ListGroup>
+                </tbody>
+            </Table>
         </Container>
     );
 });

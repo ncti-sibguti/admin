@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Button, Container} from "react-bootstrap";
-import {GROUPS_URL, TEACHERS_URL} from "../api/url";
+import {GROUPS_URL, SUBJECT_URL, TEACHERS_URL} from "../api/url";
 import StudentModal from "./menu/modal/StudentModal";
 
 const Menu = () => {
@@ -14,6 +14,9 @@ const Menu = () => {
             </Button>
             <Button href={TEACHERS_URL} variant={"outline-primary"} className={"mb-3"}>
                 Преподаватели
+            </Button>
+            <Button href={SUBJECT_URL} variant={"outline-primary"} className={"mb-3"}>
+                Предметы
             </Button>
             <Button onClick={() => setShow(true)} variant={"outline-primary"} className={"mb-3"}>
                 Добавить студента

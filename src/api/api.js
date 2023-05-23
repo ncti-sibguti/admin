@@ -4,6 +4,7 @@ import jwtDecode from "jwt-decode";
 const AUTH_URL = "/auth";
 const TEACHERS_URL = "/teachers"
 const STUDENTS_URL = "/students"
+const SUBJECTS_URL = "/subjects"
 const GROUPS_URL = "/groups"
 
 const login = async (username, password) => {
@@ -116,6 +117,16 @@ const deleteGroupById = async (id) => {
     return data;
 }
 
+const getSubjects = async () => {
+    const {data} = await $auth.get("/admin" + SUBJECTS_URL);
+    return data;
+}
+
+const addSubject = async (name) => {
+    await $auth.post("/admin" + SUBJECTS_URL, {name})
+}
+
+
 const resetPassword = async (id) => {
     let password = process.env.RESET_PASSWORD
     await $auth.put("/admin/reset", {id, password})
@@ -154,5 +165,7 @@ export {
     createStudent,
     createTeachersWithFile,
     createTeacher,
-    uploadSchedule
+    uploadSchedule,
+    addSubject,
+    getSubjects
 }

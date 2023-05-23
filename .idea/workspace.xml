@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99329cf-ab37-481f-a1db-c158732255dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/menu/modal/ScheduleEditModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/modal/ScheduleUploadModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menu/speciality/SpecialityList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menu/subject/SubjectItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menu/subject/Subjects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/url.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/url.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Group.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/GroupItem.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Groups.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Groups.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/subject/SubjectItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/subject/Subjects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/modal/StudentModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/modal/StudentModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/modal/TeacherModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/modal/TeacherModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/NavBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,6 +135,22 @@
       <workItem from="1683457555098" duration="2412000" />
       <workItem from="1683463892696" duration="592000" />
       <workItem from="1683464778305" duration="7144000" />
+      <workItem from="1684212294862" duration="2000" />
+      <workItem from="1684219860891" duration="8000" />
+      <workItem from="1684221075092" duration="43000" />
+      <workItem from="1684221804127" duration="70000" />
+      <workItem from="1684257004273" duration="10000" />
+      <workItem from="1684257988710" duration="595000" />
+      <workItem from="1684305951316" duration="78000" />
+      <workItem from="1684315046283" duration="118000" />
+      <workItem from="1684323347971" duration="2000" />
+      <workItem from="1684324874687" duration="3000" />
+      <workItem from="1684325029642" duration="594000" />
+      <workItem from="1684478213610" duration="600000" />
+      <workItem from="1684501617970" duration="5551000" />
+      <workItem from="1684748270658" duration="589000" />
+      <workItem from="1684754452567" duration="1000" />
+      <workItem from="1684818588915" duration="97000" />
     </task>
     <servers />
   </component>

@@ -4,6 +4,7 @@ import {createTeacher, createTeachersWithFile} from "../../../api/api";
 
 const TeacherModal = ({show, onHide}) => {
 
+
     const [isFile, setIsFile] = useState(false);
 
     const [lastname, setLastname] = useState("")
@@ -27,6 +28,7 @@ const TeacherModal = ({show, onHide}) => {
             await createTeachersWithFile(selectedFile);
         else
             await createTeacher(firstname, lastname, surname, email, password)
+        onHide = false
     }
 
     return (

@@ -3,8 +3,8 @@ import {
     GROUPS_URL,
     LOGIN_URL,
     MENU_URL,
-    REGISTER_URL,
     STUDENT_URL,
+    SUBJECT_URL,
     TEACHER_URL,
     TEACHERS_URL
 } from "./api/url";
@@ -15,14 +15,11 @@ import Teachers from "./components/menu/teacher/Teachers";
 import Teacher from "./components/menu/teacher/Teacher";
 import Student from "./components/menu/students/Student";
 import Groups from "./components/menu/groups/Groups";
+import Subjects from "./components/menu/subject/Subjects";
 
 const publicRouters = [
     {
         path: LOGIN_URL,
-        Component: Auth
-    },
-    {
-        path: REGISTER_URL,
         Component: Auth
     }
 ]
@@ -52,6 +49,10 @@ const authRouters = [
         path: GROUP_URL + "/:id",
         Component: Group
     },
+    {
+        path: SUBJECT_URL,
+        Component: Subjects
+    }
 ]
 
 

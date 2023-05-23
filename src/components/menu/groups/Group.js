@@ -1,13 +1,14 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {Button, Container, Form, Tab, Tabs} from "react-bootstrap";
 import {useNavigate, useParams} from "react-router-dom";
-import {deleteGroupById, getGroupById, getTeachers} from "../../../api/api";
+import {deleteGroupById, getGroupById, getSubjects, getTeachers} from "../../../api/api";
 import {MENU_URL} from "../../../api/url";
 import {Context} from "../../../index";
 import Schedule from "./Schedule";
 import Students from "../students/Students";
+import {observer} from "mobx-react-lite";
 
-const Group = () => {
+const Group = observer(() => {
     const params = useParams();
     const navigate = useNavigate();
 
@@ -15,14 +16,12 @@ const Group = () => {
 
     const [name, setName] = useState("")
 
-    const [group, setGroup] = useState({
-        name: "",
-        schedule: []
-    });
+    const [group, setGroup] = useState({name: "", schedule: []});
 
     useEffect(() => {
         getGroupById(params.id).then(data => setGroup(data));
         getTeachers().then(data => storage.teachers = data)
+        getSubjects().then(data => storage.subjects = data)
         setName(group.name)
     }, [params.id, group.name, storage])
 
@@ -54,7 +53,7 @@ const Group = () => {
             </Form>
 
             <Tabs
-                defaultActiveKey="schedule"
+                defaultActiveKey="students"
                 id="uncontrolled-tab-example"
                 className="mb-3"
             >
@@ -67,6 +66,6 @@ const Group = () => {
             </Tabs>
         </Container>
     );
-};
+});
 
 export default Group;

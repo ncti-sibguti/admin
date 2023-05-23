@@ -28,6 +28,7 @@ const StudentModal = ({show, onHide}) => {
             await createStudentWithFile(selectedFile);
         else
             await createStudent(firstname, lastname, surname, email, password, group);
+        onHide = false
     }
 
     return (

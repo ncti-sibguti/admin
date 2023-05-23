@@ -1,19 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Form, Table} from "react-bootstrap";
 import {createSchedule} from "../../../api/api";
-import ScheduleEditModal from "../modal/ScheduleEditModal";
 
 const Schedule = ({id, schedule, storage}) => {
 
     const [dayForSchedule, setDayForSchedule] = useState("");
     const [numberPair, setNumberPair] = useState("");
     const [teacherId, setTeacherId] = useState("")
-    const [subject, setSubject] = useState("")
+    const [subjectId, setSubjectId] = useState("")
     const [classroom, setClassroom] = useState("")
-    const [weekType, setWeekType] = useState("")
+    const [weektype, setWeekType] = useState(0)
 
     const [lessons, setLessons] = useState([]);
-    const [groupedLessons, setGroupedLessons] = useState({});
+    const [groupedLessons, setGroupedLessons] = useState([{}]);
 
     const dayInWeek = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
 
@@ -22,36 +21,32 @@ const Schedule = ({id, schedule, storage}) => {
     }, [schedule])
 
     useEffect(() => {
-        // Группируем по дням
-        const grouped = lessons.reduce((acc, lesson) => {
-            if (!acc[lesson.day]) {
-                acc[lesson.day] = [];
-            }
+        // Group lessons by day
+        if (lessons) {
+            const grouped = lessons.reduce((acc, lesson) => {
+                if (!acc[lesson.day]) {
+                    acc[lesson.day] = [];
+                }
 
-            acc[lesson.day].push(lesson);
-            return acc;
-        }, {});
+                acc[lesson.day].push(lesson);
+                return acc;
+            }, {});
 
-        if (dayInWeek) {
-            dayInWeek.map((i) => {
-                if (grouped[i])
-                    grouped[i].sort((a, b) => a.numberPair - b.numberPair)
-            })
+            // Sort lessons by numberPair within each day
+            Object.values(grouped).forEach(dayLessons => {
+                dayLessons.sort((a, b) => a.numberPair - b.numberPair);
+            });
+
+            setGroupedLessons(grouped);
         }
-
-        setGroupedLessons(grouped);
-    }, [dayInWeek, lessons]);
+    }, [lessons]);
 
     const addSchedule = async () => {
-        await createSchedule(dayForSchedule, id, numberPair, teacherId, subject, classroom, weekType);
+        await createSchedule(dayForSchedule, id, numberPair, teacherId, subjectId, classroom, weektype);
     }
 
-    const [show, setShow] = useState(false)
-    const [one, setOne] = useState([{}])
-
-
     return (
-        <>
+        <div>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Выберите день недели</Form.Label>
@@ -74,10 +69,17 @@ const Schedule = ({id, schedule, storage}) => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Предмет</Form.Label>
-                    <Form.Control value={subject} type="text" placeholder="Номер кабинета"
-                                  onChange={(e) => setSubject(e.target.value)}/>
+                    <Form.Label>Выберите предмет</Form.Label>
+                    <Form.Select value={subjectId} onChange={(e) => setSubjectId(e.target.value)}
+                                 aria-label="Выберите предмет">
+                        <option>Выберите предмет</option>
+                        {
+                            storage.subjects.map(({id, name}) => <option
+                                key={id} value={id}> {name}</option>)
+                        }
+                    </Form.Select>
                 </Form.Group>
+
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Выберите преподавателя</Form.Label>
                     <Form.Select value={teacherId} onChange={(e) => setTeacherId(e.target.value)}
@@ -97,14 +99,9 @@ const Schedule = ({id, schedule, storage}) => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Тип дня</Form.Label>
-                    <Form.Select value={weekType} onChange={(e) => setWeekType(e.target.value)}
-                                 aria-label="Выберите день недели">
-                        <option>Выберите тип дня</option>
-                        <option value={"odd"}>нечетный</option>
-                        <option value={"even"}>четный</option>
-                        <option value={"const"}>постоянный</option>
-                    </Form.Select>
+                    <Form.Label>Тип пары(0 - постоянная, 1 - нечетная, 2 - четная)</Form.Label>
+                    <Form.Control value={weektype} type="number" max={"2"} min={"0"} placeholder="Тип пары"
+                                  onChange={(e) => setWeekType(e.target.value)}/>
                 </Form.Group>
 
                 <Button variant="primary" type="submit" onClick={addSchedule}>
@@ -113,44 +110,40 @@ const Schedule = ({id, schedule, storage}) => {
             </Form>
 
             {
-                schedule.length === 0 &&
+                (schedule && schedule.length === 0) &&
                 <p>У текущей группы нет расписания</p>
             }
             {
-                schedule.length !== 0 &&
+                (schedule && schedule.length !== 0) &&
                 dayInWeek.map((day) =>
-                    <Table>
-                        <thead>
-                        <caption>{day}</caption>
-                        <tr>
-                            <th>№</th>
-                            <th>Предмет</th>
-                            <th>Преподаватель</th>
-                            <th>Кабинет</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {
-                            groupedLessons[day] &&
-                            groupedLessons[day].map((i) => (
-                                <tr onClick={() => {
-                                    setOne(i)
-                                    setShow(true)
-                                }}>
-                                    <td>{i.numberPair}</td>
-                                    <td>{i.subject}</td>
-                                    <td>{i.teacher.lastname} {i.teacher.firstname} {i.teacher.surname}</td>
-                                    <td>{i.classroom}</td>
-                                </tr>
-                            ))
-                        }
-                        </tbody>
-                    </Table>
-                )
+                    groupedLessons[day] != null && (
+                        <Table>
+                            <caption>{day}</caption>
+                            <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Предмет</th>
+                                <th>Преподаватель</th>
+                                <th>Кабинет</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {
+                                groupedLessons[day] &&
+                                groupedLessons[day].map((i) => (
+                                    <tr>
+                                        <td>{i.numberPair}</td>
+                                        <td>{i.subject.name}</td>
+                                        <td>{i.teacher.lastname} {i.teacher.firstname} {i.teacher.surname}</td>
+                                        <td>{i.classroom}</td>
+                                    </tr>
+                                ))
+                            }
+                            </tbody>
+                        </Table>
+                    ))
             }
-
-            <ScheduleEditModal show={show} onHide={() => setShow(false)} subject={one}/>
-        </>
+        </div>
     );
 };
 
