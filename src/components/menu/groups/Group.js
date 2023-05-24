@@ -16,7 +16,7 @@ const Group = observer(() => {
 
     const [name, setName] = useState("")
 
-    const [group, setGroup] = useState({name: "", schedule: []});
+    const [group, setGroup] = useState({name: "", sample: []});
 
     useEffect(() => {
         getGroupById(params.id).then(data => setGroup(data));
@@ -61,7 +61,7 @@ const Group = observer(() => {
                     <Students group={params.id}/>
                 </Tab>
                 <Tab eventKey="schedule" title="Расписания">
-                    <Schedule id={params.id} schedule={group.schedule} storage={storage}/>
+                    <Schedule id={params.id} schedule={group.sample} storage={storage}/>
                 </Tab>
             </Tabs>
         </Container>

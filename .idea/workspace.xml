@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99329cf-ab37-481f-a1db-c158732255dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/menu/speciality/SpecialityList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/subject/SubjectItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/subject/Subjects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/url.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/url.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Group.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/GroupItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Groups.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Groups.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/modal/StudentModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/modal/StudentModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/modal/TeacherModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/modal/TeacherModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +137,12 @@
       <workItem from="1684501617970" duration="5551000" />
       <workItem from="1684748270658" duration="589000" />
       <workItem from="1684754452567" duration="1000" />
-      <workItem from="1684818588915" duration="97000" />
+      <workItem from="1684818588915" duration="879000" />
+      <workItem from="1684820833344" duration="2003000" />
+      <workItem from="1684851155959" duration="715000" />
+      <workItem from="1684916645401" duration="1000" />
+      <workItem from="1684917752550" duration="1281000" />
+      <workItem from="1684930054568" duration="755000" />
     </task>
     <servers />
   </component>
