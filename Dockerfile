@@ -11,6 +11,8 @@ RUN npm install
 # Копирование кода приложения
 COPY . .
 
+ENV REACT_APP_API_URL=/api
+
 # Сборка приложения
 RUN npm run build
 
