@@ -140,7 +140,7 @@ const createSchedule = async (day, id, numberPair, teacherId, subject, classroom
         teacher: teacherId,
         subject: subject,
         classroom: classroom,
-        weekType: weekType
+        parity: weekType
     })
     return data
 }
