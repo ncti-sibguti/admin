@@ -117,7 +117,7 @@ const Schedule = ({id, schedule, storage}) => {
                 (schedule && schedule.length !== 0) &&
                 dayInWeek.map((day) =>
                     groupedLessons[day] != null && (
-                        <Table>
+                        <Table key={"day__" + day}>
                             <caption>{day}</caption>
                             <thead>
                             <tr>
@@ -131,7 +131,7 @@ const Schedule = ({id, schedule, storage}) => {
                             {
                                 groupedLessons[day] &&
                                 groupedLessons[day].map((i) => (
-                                    <tr>
+                                    <tr key={"id__" + i.id}>
                                         <td>{i.numberPair}</td>
                                         <td>{i.subject.name}</td>
                                         <td>{i.teacher.lastname} {i.teacher.firstname} {i.teacher.surname}</td>

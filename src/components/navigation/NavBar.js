@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Button, Container, Nav, Navbar} from 'react-bootstrap';
+import {Button, Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
 import {Context} from "../../index";
 import {observer} from "mobx-react-lite";
 import {MENU_URL} from "../../api/url";
@@ -35,8 +35,12 @@ const NavBar = observer(() => {
                                 <Nav.Link href={MENU_URL}>Главное меню</Nav.Link>
                             </Nav>
                             <Nav.Item>
-                                Signed in as: {user.user.firstname} {user.user.lastname}
+
                             </Nav.Item>
+                            <NavDropdown title={`Signed in as: ${user.user.firstname} ${user.user.lastname}`}
+                                         id="basic-nav-dropdown">
+                                <NavDropdown.Item href="#action/3.1">TODO</NavDropdown.Item>
+                            </NavDropdown>
                         </Navbar.Collapse>
                     )
                 }

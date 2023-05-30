@@ -21,7 +21,6 @@ const Menu = () => {
             <Button onClick={() => setShow(true)} variant={"outline-primary"} className={"mb-3"}>
                 Добавить студента
             </Button>
-
             <StudentModal show={show} onHide={() => setShow(false)}/>
         </Container>
     );

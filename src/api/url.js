@@ -1,5 +1,5 @@
 const LOGIN_URL = "/login"
-const MENU_URL = "/menu"
+const MENU_URL = "/"
 const STUDENT_URL = "/student"
 const GROUPS_URL = "/groups"
 const GROUP_URL = "/groups"

@@ -1,16 +1,15 @@
 import React, {useContext, useState} from 'react';
 import {observer} from "mobx-react-lite";
-import {useLocation, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {Context} from "../../index";
 import {Button, Container, Form} from 'react-bootstrap';
-import {LOGIN_URL, MENU_URL} from "../../api/url";
-import {login, register} from "../../api/api";
+import {MENU_URL} from "../../api/url";
+import {login} from "../../api/api";
 
 const Auth = observer(() => {
 
     const {user} = useContext(Context)
     const navigate = useNavigate();
-    const location = useLocation()
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -18,17 +17,10 @@ const Auth = observer(() => {
     const signup = async (e) => {
         e.preventDefault()
         try {
-            let data;
-            if (location.pathname === "/login") {
-                data = await login(username, password);
-                user.isAuth = true;
-                user.user = data;
-                navigate(MENU_URL)
-            } else {
-                const data = await register(username, password)
-                console.log(data)
-                navigate(LOGIN_URL)
-            }
+            let data = await login(username, password);
+            user.isAuth = true;
+            user.user = data;
+            navigate(MENU_URL)
         } catch (error) {
             console.log(error);
         }
@@ -36,7 +28,6 @@ const Auth = observer(() => {
 
     return (
         <Container>
-
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Логин или Email</Form.Label>

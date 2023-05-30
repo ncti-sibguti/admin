@@ -6,7 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="f99329cf-ab37-481f-a1db-c158732255dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/url.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/url.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Group.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Groups.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Groups.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/students/Students.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/students/Students.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/subject/Subjects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/subject/Subjects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/teacher/Teachers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/teacher/Teachers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigation/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/NavBar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +47,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projects/mobile-application/test&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -142,6 +153,10 @@
       <workItem from="1684916645401" duration="1000" />
       <workItem from="1684917752550" duration="1281000" />
       <workItem from="1684930054568" duration="2057000" />
+      <workItem from="1685107511017" duration="625000" />
+      <workItem from="1685203291952" duration="16000" />
+      <workItem from="1685355056840" duration="2153000" />
+      <workItem from="1685365335040" duration="1910000" />
     </task>
     <servers />
   </component>

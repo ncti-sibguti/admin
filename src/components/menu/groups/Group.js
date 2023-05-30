@@ -53,7 +53,7 @@ const Group = observer(() => {
             </Form>
 
             <Tabs
-                defaultActiveKey="students"
+                defaultActiveKey="schedule"
                 id="uncontrolled-tab-example"
                 className="mb-3"
             >

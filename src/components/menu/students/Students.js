@@ -18,7 +18,7 @@ const Students = observer(({group}) => {
             <ListGroup as="ul">
                 {
                     storage.students && storage.students.map(({id, firstname, lastname, surname}) =>
-                        <Student key={id} id={id} firstname={firstname} lastname={lastname} surname={surname}/>)
+                        <Student key={"id__" + id} id={id} firstname={firstname} lastname={lastname} surname={surname}/>)
                 }
             </ListGroup>
         </Container>

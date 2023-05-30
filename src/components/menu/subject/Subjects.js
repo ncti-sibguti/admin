@@ -36,7 +36,7 @@ const Subjects = observer(() => {
 
             <ListGroup as="ul">
                 {
-                    storage.subjects.map(({id, name}) => <SubjectItem key={id} id={id} name={name}/>)
+                    storage.subjects.map(({id, name}) => <SubjectItem key={"id__" + id} id={id} name={name}/>)
                 }
             </ListGroup>
 

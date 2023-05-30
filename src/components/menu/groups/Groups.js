@@ -46,7 +46,7 @@ const Groups = observer(() => {
 
             <ScheduleUploadModal show={show} onHide={() => setShow(false)}/>
 
-            <h1 className={"mt-3"}>Расписание</h1>
+            <h1 className={"mt-3"}>Группы</h1>
 
             <Table>
                 <thead>
@@ -60,7 +60,7 @@ const Groups = observer(() => {
                 {
                     storage.groups &&
                     storage.groups.map(({id, name, course, speciality}) => (
-                        <tr style={{cursor: "pointer"}} onClick={() => navigate(GROUP_URL + "/" + id)}>
+                        <tr key={"id__" + id} style={{cursor: "pointer"}} onClick={() => navigate(GROUP_URL + "/" + id)}>
                             <td>{name}</td>
                             <td>{course}</td>
                             <td>{speciality && speciality.id} {speciality && speciality.name}</td>

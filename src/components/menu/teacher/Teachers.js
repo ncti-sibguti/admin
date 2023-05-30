@@ -22,7 +22,7 @@ const Teachers = observer(() => {
             <ListGroup as="ul">
                 {
                     storage.teachers.length !== 0 && storage.teachers.map(({id, firstname, lastname, surname}) =>
-                        <TeachersItem key={id} id={id}
+                        <TeachersItem key={"id__" + id} id={id}
                                       firstname={firstname}
                                       lastname={lastname}
                                       surname={surname}/>)
