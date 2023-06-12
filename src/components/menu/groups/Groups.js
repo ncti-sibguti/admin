@@ -60,10 +60,11 @@ const Groups = observer(() => {
                 {
                     storage.groups &&
                     storage.groups.map(({id, name, course, speciality}) => (
-                        <tr key={"id__" + id} style={{cursor: "pointer"}} onClick={() => navigate(GROUP_URL + "/" + id)}>
+                        <tr key={"id__" + id} style={{cursor: "pointer"}}
+                            onClick={() => navigate(GROUP_URL + "/" + id)}>
                             <td>{name}</td>
                             <td>{course}</td>
-                            <td>{speciality && speciality.id} {speciality && speciality.name}</td>
+                            <td>{speciality && speciality.name}</td>
                         </tr>
                     ))
                 }

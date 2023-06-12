@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f99329cf-ab37-481f-a1db-c158732255dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/url.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/url.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Group.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Group.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Groups.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Groups.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/groups/Schedule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/students/Students.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/students/Students.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/subject/Subjects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/subject/Subjects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/teacher/Teachers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/teacher/Teachers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigation/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigation/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/subject/SubjectItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/subject/SubjectItem.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +148,12 @@
       <workItem from="1685203291952" duration="16000" />
       <workItem from="1685355056840" duration="2153000" />
       <workItem from="1685365335040" duration="1910000" />
+      <workItem from="1685435380047" duration="1366000" />
+      <workItem from="1685533609951" duration="34000" />
+      <workItem from="1686030207743" duration="286000" />
+      <workItem from="1686037217666" duration="1399000" />
+      <workItem from="1686393399899" duration="7000" />
+      <workItem from="1686568337556" duration="782000" />
     </task>
     <servers />
   </component>
